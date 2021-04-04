@@ -31,8 +31,8 @@ requirements:
     - pip
     - swig
     - openmm
-    - pytorch-gpu {{ pytorch }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - pytorch-cpu {{ pytorch }}  # [osx]
+    - pytorch-gpu {{ pytorch_version }}  # [cuda_compiler_version not in (undefined, 'None')]
+    - pytorch-cpu {{ pytorch_version }}  # [osx]
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
   run:
