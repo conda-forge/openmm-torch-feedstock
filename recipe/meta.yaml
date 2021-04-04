@@ -10,7 +10,7 @@ source:
   sha256: 6ff3c2d903729eb9145c02e694fe943c52cf9263736f9db26bb84511fbb2d71d
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   rpaths:
     - lib/
@@ -39,8 +39,8 @@ requirements:
     - python
     - pytorch
     # ^ needed so conda build does not complain about overlinking
-    - {{ pin_compatible('pytorch-gpu') }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - {{ pin_compatible('pytorch-cpu') }}  # [osx]
+    - {{ pin_compatible('pytorch-gpu', min_pin='x.x.x', max_pin='x.x.x') }}  # [cuda_compiler_version not in (undefined, 'None')]
+    - {{ pin_compatible('pytorch-cpu', min_pin='x.x.x', max_pin='x.x.x') }}  # [osx]
     - {{ pin_compatible('openmm',  min_pin='x.x', max_pin='x.x') }}
     - ocl-icd  # [linux]
     - ocl-icd-system  # [linux]
