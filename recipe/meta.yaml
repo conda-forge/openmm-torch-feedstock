@@ -39,9 +39,9 @@ requirements:
     - python
     - pytorch
     # ^ needed so conda build does not complain about overlinking
-    - {{ pin_compatible('pytorch-gpu', min_pin='x.x.x', max_pin='x.x.x') }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - {{ pin_compatible('pytorch-cpu', min_pin='x.x.x', max_pin='x.x.x') }}  # [osx]
-    - {{ pin_compatible('openmm',  min_pin='x.x', max_pin='x.x') }}
+    - {{ pin_compatible('pytorch-gpu', max_pin='x.x.x') }}  # [cuda_compiler_version not in (undefined, 'None')]
+    - {{ pin_compatible('pytorch-cpu', max_pin='x.x.x') }}  # [osx]
+    - {{ pin_compatible('openmm', max_pin='x.x') }}
     - ocl-icd  # [linux]
     - ocl-icd-system  # [linux]
     - khronos-opencl-icd-loader  # [osx]
