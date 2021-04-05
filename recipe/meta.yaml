@@ -10,7 +10,7 @@ source:
   sha256: 6ff3c2d903729eb9145c02e694fe943c52cf9263736f9db26bb84511fbb2d71d
 
 build:
-  number: 2
+  number: 4
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
   rpaths:
     - lib/
