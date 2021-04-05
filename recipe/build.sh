@@ -30,5 +30,10 @@ make -j$CPU_COUNT PythonInstall
 
 # Include test executables too
 mkdir -p ${PREFIX}/share/${PKG_NAME}/tests
-find . -name 'Test*' -perm +0111 -type f -exec cp {} ${PREFIX}/share/${PKG_NAME}/tests/ \;
+if [[ "$target_platform" == osx* ]]; then
+    find . -name 'Test*' -perm +0111 -type f -exec cp {} ${PREFIX}/share/${PKG_NAME}/tests/ \;
+else
+    find . -name 'Test*' -executable -type f -exec cp {} ${PREFIX}/share/${PKG_NAME}/tests/ \;
+fi
 cp -r tests ${PREFIX}/share/${PKG_NAME}/tests/
+ls -al ${PREFIX}/share/${PKG_NAME}/tests/

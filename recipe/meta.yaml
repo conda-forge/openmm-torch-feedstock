@@ -52,6 +52,7 @@ test:
     - openmmtorch
   commands: |
     cd ${CONDA_PREFIX}/share/{{ name }}/tests
+    ls -al
     set +e
     summary=""
     exitcode=0
