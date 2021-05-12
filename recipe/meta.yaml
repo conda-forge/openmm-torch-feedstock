@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "0.1" %}
+{% set version = "0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,16 @@ package:
 
 source:
   url: https://github.com/openmm/openmm-torch/archive/v{{ version }}.tar.gz
-  sha256: 6ff3c2d903729eb9145c02e694fe943c52cf9263736f9db26bb84511fbb2d71d
+  sha256: f3f60058c5d930a77e65c6c82df31faec47628a7ea405380fc15aff2e4d8ddd0
 
 build:
-  number: 5
+  number: 0
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
   rpaths:
     - lib/
     - {{ SP_DIR }}/torch/lib
   missing_dso_whitelist:
-    - "*/libcuda.*"  # [linux64 or ppc64le]
+    - '*/libcuda.*'  # [linux64 or ppc64le]
 
 requirements:
   build:
@@ -78,7 +78,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: README.md
-  summary: 'OpenMM plugin to define forces with neural networks'
+  summary: OpenMM plugin to define forces with neural networks
   description: |
     This is a plugin for OpenMM that allows neural networks to be
     used for defining forces. It is implemented with PyTorch.
