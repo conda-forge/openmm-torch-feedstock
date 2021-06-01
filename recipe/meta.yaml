@@ -1,13 +1,13 @@
 {% set name = "openmm-torch" %}
-{% set version = "0.2" %}
+{% set version = ".03" %} # Typo in tag name, oops!
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/openmm/openmm-torch/archive/v{{ version }}.tar.gz
-  sha256: f3f60058c5d930a77e65c6c82df31faec47628a7ea405380fc15aff2e4d8ddd0
+  git_url: https://github.com/openmm/{{ name }}.git
+  git_rev: v{{ version }}
 
 build:
   number: 0
