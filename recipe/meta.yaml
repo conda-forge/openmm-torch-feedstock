@@ -10,7 +10,7 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
   rpaths:
     - lib/
