@@ -8,41 +8,14 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_python3.7.____cpythonpytorch_version1.10.0:
-        CONFIG: osx_64_python3.7.____cpythonpytorch_version1.10.0
+      osx_64_python3.7.____cpython:
+        CONFIG: osx_64_python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.7.____cpythonpytorch_version1.8.0:
-        CONFIG: osx_64_python3.7.____cpythonpytorch_version1.8.0
+      osx_64_python3.8.____cpython:
+        CONFIG: osx_64_python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.7.____cpythonpytorch_version1.9.0:
-        CONFIG: osx_64_python3.7.____cpythonpytorch_version1.9.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.7.____cpythonpytorch_version1.9.1:
-        CONFIG: osx_64_python3.7.____cpythonpytorch_version1.9.1
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonpytorch_version1.10.0:
-        CONFIG: osx_64_python3.8.____cpythonpytorch_version1.10.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonpytorch_version1.8.0:
-        CONFIG: osx_64_python3.8.____cpythonpytorch_version1.8.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonpytorch_version1.9.0:
-        CONFIG: osx_64_python3.8.____cpythonpytorch_version1.9.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonpytorch_version1.9.1:
-        CONFIG: osx_64_python3.8.____cpythonpytorch_version1.9.1
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonpytorch_version1.10.0:
-        CONFIG: osx_64_python3.9.____cpythonpytorch_version1.10.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonpytorch_version1.8.0:
-        CONFIG: osx_64_python3.9.____cpythonpytorch_version1.8.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonpytorch_version1.9.0:
-        CONFIG: osx_64_python3.9.____cpythonpytorch_version1.9.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonpytorch_version1.9.1:
-        CONFIG: osx_64_python3.9.____cpythonpytorch_version1.9.1
+      osx_64_python3.9.____cpython:
+        CONFIG: osx_64_python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
