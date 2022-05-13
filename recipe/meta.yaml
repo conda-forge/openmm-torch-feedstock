@@ -1,6 +1,9 @@
 {% set name = "openmm-torch" %}
 {% set version = "0.6" %}
 
+# see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
+{% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -33,21 +36,31 @@ requirements:
     - pip
     - swig
     - openmm
-    - pytorch-gpu {{ pytorch_version }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - pytorch-cpu {{ pytorch_version }}  # [osx]
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
+    # Leaving two dependencies helps rerender correctly
+    # The first gets filled in by the global pinnings
+    # The second gets the processor type
+    - pytorch
+    - pytorch =*={{ torch_proc_type }}*
   run:
     - python
-    - pytorch
-    # ^ needed so conda build does not complain about overlinking
-    - {{ pin_compatible('pytorch-gpu', max_pin='x.x.x') }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - {{ pin_compatible('pytorch-cpu', max_pin='x.x.x') }}  # [osx]
     - {{ pin_compatible('openmm', max_pin='x.x') }}
     - ocl-icd  # [linux]
     - ocl-icd-system  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - ocl_icd_wrapper_apple      # [osx]
+  run_constrained:
+    # 2022/02/05 hmaarrfk
+    # While conda packaging seems to allow us to specify
+    # constraints on the same package in different lines
+    # the resulting package doesn't have the ability to
+    # be specified in multiples lines
+    # This makes it tricky to use run_exports
+    # we add the GPU constraint in the run_constrained
+    # to allow us to have "two" constraints on the
+    # running package
+    - pytorch =*={{ torch_proc_type }}*
 
 test:
   imports:
@@ -95,3 +108,4 @@ extra:
     - raimis
     - jaimergp
     - peastman
+    - mikemhenry
