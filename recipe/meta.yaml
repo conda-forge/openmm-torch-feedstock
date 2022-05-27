@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
@@ -16,7 +16,7 @@ build:
   number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}                                      # [cuda_compiler_version == "None"]
-  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
+  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   rpaths:
     - lib/
     - {{ SP_DIR }}/torch/lib
