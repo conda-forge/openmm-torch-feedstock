@@ -31,7 +31,7 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - cmake
     - make
-    - sysroot_linux-64 2.17  # [linux]
+    - sysroot_linux-64 2.12  # [cuda_compiler_version == '10.2']
   host:
     - python
     - pip
