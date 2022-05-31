@@ -9,8 +9,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: v{{ version }}
+  url: https://github.com/openmm/openmm-torch/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 06a0f567c1b82746841424d63627e311d93cba4ab0e121f7d9d64701e753467a
 
 build:
   number: 0
