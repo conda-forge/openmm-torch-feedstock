@@ -1,24 +1,22 @@
 {% set name = "openmm-torch" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
+
+# see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
+{% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: v{{ version }}
+  url: https://github.com/openmm/openmm-torch/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 06a0f567c1b82746841424d63627e311d93cba4ab0e121f7d9d64701e753467a
 
 build:
   number: 0
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}                                      # [cuda_compiler_version == "None"]
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
-  rpaths:
-    - lib/
-    - {{ SP_DIR }}/torch/lib
-  missing_dso_whitelist:
-    - '*/libcuda.*'  # [linux64 or ppc64le]
 
 requirements:
   build:
@@ -33,21 +31,31 @@ requirements:
     - pip
     - swig
     - openmm
-    - pytorch-gpu {{ pytorch_version }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - pytorch-cpu {{ pytorch_version }}  # [osx]
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
+    # Leaving two dependencies helps rerender correctly
+    # The first gets filled in by the global pinnings
+    # The second gets the processor type
+    - pytorch
+    - pytorch =*={{ torch_proc_type }}*
   run:
     - python
-    - pytorch
-    # ^ needed so conda build does not complain about overlinking
-    - {{ pin_compatible('pytorch-gpu', max_pin='x.x.x') }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - {{ pin_compatible('pytorch-cpu', max_pin='x.x.x') }}  # [osx]
     - {{ pin_compatible('openmm', max_pin='x.x') }}
     - ocl-icd  # [linux]
     - ocl-icd-system  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - ocl_icd_wrapper_apple      # [osx]
+  run_constrained:
+    # 2022/02/05 hmaarrfk
+    # While conda packaging seems to allow us to specify
+    # constraints on the same package in different lines
+    # the resulting package doesn't have the ability to
+    # be specified in multiples lines
+    # This makes it tricky to use run_exports
+    # we add the GPU constraint in the run_constrained
+    # to allow us to have "two" constraints on the
+    # running package
+    - pytorch =*={{ torch_proc_type }}*
 
 test:
   imports:
@@ -95,3 +103,4 @@ extra:
     - raimis
     - jaimergp
     - peastman
+    - mikemhenry
