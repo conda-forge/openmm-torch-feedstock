@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/openmm/openmm-torch/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 06a0f567c1b82746841424d63627e311d93cba4ab0e121f7d9d64701e753467a
+  sha256: f11a2a1f58aa4a58d6c9355f7248a36043966771cb1be028a6f847c258ff4786
 
 build:
   number: 0
