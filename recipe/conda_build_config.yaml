@@ -3,5 +3,7 @@ pytorch_version:
   - 1.9.0
   - 1.9.1
   - 1.10.0
+channel_sources:
+- conda-forge/label/openmm_rc,conda-forge,defaults
 channel_targets:
 - conda-forge openmm_rc
