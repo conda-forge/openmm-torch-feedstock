@@ -33,7 +33,7 @@ requirements:
     - python
     - pip
     - swig
-    - openmm ==8.0beta
+    - openmm ==8.0.0beta
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     # Leaving two dependencies helps rerender correctly
