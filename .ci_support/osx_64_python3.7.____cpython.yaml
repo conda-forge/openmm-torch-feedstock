@@ -5,7 +5,7 @@ c_compiler:
 c_compiler_version:
 - '13'
 channel_sources:
-- conda-forge
+- conda-forge/label/openmm_rc,conda-forge,defaults
 channel_targets:
 - conda-forge openmm_rc
 cuda_compiler_version:
