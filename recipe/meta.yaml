@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/openmm/{{ name }}.git
+  git_url: https://github.com/openmm-torch/{{ name }}.git
   git_rev: "5dc7279"
 
 build:
