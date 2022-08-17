@@ -4,6 +4,9 @@ set -euxo pipefail
 
 rm -rf build || true
 
+echo "Contents of Torch_DIR:"
+ls ${SP_DIR}/torch/share/cmake/Torch
+
 CMAKE_FLAGS="  -DCMAKE_INSTALL_PREFIX=${PREFIX}"
 CMAKE_FLAGS+=" -DCMAKE_BUILD_TYPE=Release"
 
