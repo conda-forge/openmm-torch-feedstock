@@ -4,7 +4,6 @@ set -euxo pipefail
 
 rm -rf build || true
 
-ls ${PREFIX}/lib/python${PY_VER}/site-packages
 ls ${BUILD_PREFIX}/lib/python${PY_VER}/site-packages
 ls ${BUILD_PREFIX}/lib/python${PY_VER}/site-packages/torch
 ls ${BUILD_PREFIX}/lib/python${PY_VER}/site-packages/torch/share
