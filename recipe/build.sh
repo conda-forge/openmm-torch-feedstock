@@ -17,7 +17,7 @@ CMAKE_FLAGS+=" -DCMAKE_BUILD_TYPE=Release"
 CMAKE_FLAGS+=" -DBUILD_TESTING=ON"
 CMAKE_FLAGS+=" -DOPENMM_DIR=${PREFIX}"
 CMAKE_FLAGS+=" -DPYTORCH_DIR=${SP_DIR}/torch"
-CMAKE_FLAGS+=" -DTorch_DIR=${PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake/Torch"
+CMAKE_FLAGS+=" -DTorch_DIR=${BUILD_PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake/Torch"
 # OpenCL
 CMAKE_FLAGS+=" -DNN_BUILD_OPENCL_LIB=ON"
 CMAKE_FLAGS+=" -DOPENCL_INCLUDE_DIR=${PREFIX}/include"
