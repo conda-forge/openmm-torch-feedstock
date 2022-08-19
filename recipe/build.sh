@@ -4,6 +4,8 @@ set -euxo pipefail
 
 rm -rf build || true
 
+ls ${PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake/Torch
+
 CMAKE_FLAGS="  -DCMAKE_INSTALL_PREFIX=${PREFIX}"
 CMAKE_FLAGS+=" -DCMAKE_BUILD_TYPE=Release"
 
