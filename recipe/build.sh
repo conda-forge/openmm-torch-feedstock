@@ -4,6 +4,9 @@ set -euxo pipefail
 
 rm -rf build || true
 
+echo $PY_VER
+echo $PREFIX
+echo $BUILD_PREFIX
 echo "Contents of Torch_DIR:"
 ls ${SP_DIR}
 ls ${SP_DIR}/torch
