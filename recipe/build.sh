@@ -8,11 +8,11 @@ echo $PY_VER
 echo $PREFIX
 echo $BUILD_PREFIX
 echo "Contents of Torch_DIR:"
-ls ${$PREFIX}/lib/python${PY_VER}/site-packages
-ls ${$PREFIX}/lib/python${PY_VER}/site-packages/torch
-ls ${$PREFIX}/lib/python${PY_VER}/site-packages/torch/share
-ls ${$PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake
-ls ${$PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake/Torch
+ls ${PREFIX}/lib/python${PY_VER}/site-packages
+ls ${PREFIX}/lib/python${PY_VER}/site-packages/torch
+ls ${PREFIX}/lib/python${PY_VER}/site-packages/torch/share
+ls ${PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake
+ls ${PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake/Torch
 
 CMAKE_FLAGS="  -DCMAKE_INSTALL_PREFIX=${PREFIX}"
 CMAKE_FLAGS+=" -DCMAKE_BUILD_TYPE=Release"
