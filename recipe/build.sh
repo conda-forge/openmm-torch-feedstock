@@ -5,7 +5,7 @@ set -euxo pipefail
 rm -rf build || true
 
 printenv
-python -c "import torch; print(torch.__file__)"
+find $PREFIX -name TorchConfig.cmake -print
 
 CMAKE_FLAGS="  -DCMAKE_INSTALL_PREFIX=${PREFIX}"
 CMAKE_FLAGS+=" -DCMAKE_BUILD_TYPE=Release"
