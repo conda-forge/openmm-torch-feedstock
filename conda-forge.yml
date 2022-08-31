@@ -5,3 +5,5 @@ github:
 build_platform:
   osx_arm64: osx_64
   linux_aarch64: linux_64
+azure:
+  store_build_artifacts: true
