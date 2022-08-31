@@ -11,7 +11,6 @@ CMAKE_FLAGS+=" -DBUILD_TESTING=ON"
 CMAKE_FLAGS+=" -DOPENMM_DIR=${PREFIX}"
 CMAKE_FLAGS+=" -DPYTORCH_DIR=${SP_DIR}/torch"
 CMAKE_FLAGS+=" -DTorch_DIR=${BUILD_PREFIX}/lib/python${PY_VER}/site-packages/torch/share/cmake/Torch"
-CMAKE_FLAGS+=" -DCMAKE_SHARED_LINKER_FLAGS=\"-undefined dynamic_lookup\""
 # OpenCL
 CMAKE_FLAGS+=" -DNN_BUILD_OPENCL_LIB=ON"
 CMAKE_FLAGS+=" -DOPENCL_INCLUDE_DIR=${PREFIX}/include"
@@ -25,7 +24,7 @@ fi
 # Build in subdirectory and install.
 mkdir -p build
 cd build
-cmake ${CMAKE_ARGS} "${CMAKE_FLAGS}" ${SRC_DIR}
+cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} -DCMAKE_SHARED_LINKER_FLAGS="-undefined dynamic_lookup" ${SRC_DIR}
 make -j$CPU_COUNT install
 make -j$CPU_COUNT PythonInstall
 
