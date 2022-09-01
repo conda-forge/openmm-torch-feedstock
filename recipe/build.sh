@@ -30,7 +30,7 @@ else
     cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} ${SRC_DIR}
 fi
 cat CMakeCache.txt
-make VERBOSE=1 -j$CPU_COUNT install
+make -j$CPU_COUNT install
 make -j$CPU_COUNT PythonInstall
 
 
