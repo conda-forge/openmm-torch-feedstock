@@ -24,11 +24,11 @@ fi
 # Build in subdirectory and install.
 mkdir -p build
 cd build
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} -DCMAKE_SHARED_LINKER_FLAGS="-undefined dynamic_lookup" ${SRC_DIR}
-else
+#if [[ "$OSTYPE" == "darwin"* ]]; then
+#    cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} -DCMAKE_SHARED_LINKER_FLAGS="-undefined dynamic_lookup" ${SRC_DIR}
+#else
     cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} ${SRC_DIR}
-fi
+#fi
 make -j$CPU_COUNT install
 make -j$CPU_COUNT PythonInstall
 
