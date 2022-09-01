@@ -29,7 +29,7 @@ cd build
 #else
     cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} ${SRC_DIR}
 #fi
-make -j$CPU_COUNT install
+make VERBOSE=1 -j$CPU_COUNT install
 make -j$CPU_COUNT PythonInstall
 
 
