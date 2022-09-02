@@ -43,3 +43,7 @@ else
 fi
 cp -r tests ${PREFIX}/share/${PKG_NAME}/tests/
 ls -al ${PREFIX}/share/${PKG_NAME}/tests/
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    otool -L ${PREFIX}/lib/libOpenMMTorch.dylib
+fi
