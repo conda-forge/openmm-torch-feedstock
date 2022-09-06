@@ -44,7 +44,7 @@ fi
 cp -r tests ${PREFIX}/share/${PKG_NAME}/tests/
 ls -al ${PREFIX}/share/${PKG_NAME}/tests/
 
-if [[ "$OSTYPE" == "darwin"* && $(arch) == 'arm64']]; then
+if [[ "$OSTYPE" == "darwin"* && $(arch) == 'arm64' ]]; then
     ${INSTALL_NAME_TOOL} -add_rpath @rpath/libtorch_cpu.dylib -add_rpath @rpath/libc10.dylib ${PREFIX}/lib/libOpenMMTorch.dylib
     otool -L ${PREFIX}/lib/libOpenMMTorch.dylib
 fi
