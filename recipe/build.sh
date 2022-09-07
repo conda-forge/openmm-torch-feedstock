@@ -46,7 +46,7 @@ ls -al ${PREFIX}/share/${PKG_NAME}/tests/
 printenv
 if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
     echo "Adding paths"
-    ${INSTALL_NAME_TOOL} -add_rpath "@rpath/libtorch_cpu.dylib" -add_rpath "@rpath/libc10.dylib" ${PREFIX}/lib/libOpenMMTorch.dylib
+    python -c "import lief; lib=lief.parse('${PREFIX}/lib/libOpenMMTorch.dylib'); lib.add_library('@rpath/libtorch_cpu.dylib'); lib.add_library('@rpath/libc10.dylib'); lib.write('${PREFIX}/lib/libOpenMMTorch.dylib')"
     otool -L ${PREFIX}/lib/libOpenMMTorch.dylib
 else
     echo "Not adding paths"
