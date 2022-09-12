@@ -34,11 +34,7 @@ fi
 # Build in subdirectory and install.
 mkdir -p build
 cd build
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} -DCMAKE_SHARED_LINKER_FLAGS_INIT="-undefined dynamic_lookup" ${SRC_DIR}
-else
-    cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} ${SRC_DIR}
-fi
+cmake ${CMAKE_ARGS} ${CMAKE_FLAGS} ${SRC_DIR}
 make -j$CPU_COUNT install
 make -j$CPU_COUNT PythonInstall
 
@@ -55,9 +51,5 @@ ls -al ${PREFIX}/share/${PKG_NAME}/tests/
 
 printenv
 if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
-    echo "Adding paths"
-    python -c "import lief; lib=lief.parse('${PREFIX}/lib/libOpenMMTorch.dylib'); lib.remove_signature(); lib.add_library('@rpath/libtorch_cpu.dylib'); lib.add_library('@rpath/libc10.dylib'); lib.write('${PREFIX}/lib/libOpenMMTorch.dylib')"
     otool -L ${PREFIX}/lib/libOpenMMTorch.dylib
-else
-    echo "Not adding paths"
 fi
