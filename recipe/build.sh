@@ -52,4 +52,7 @@ ls -al ${PREFIX}/share/${PKG_NAME}/tests/
 printenv
 if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
     otool -L ${PREFIX}/lib/libOpenMMTorch.dylib
+
+    # clean up, otherwise, environment is stored in package
+    rm -fr ${LIBTORCH_DIR}
 fi
