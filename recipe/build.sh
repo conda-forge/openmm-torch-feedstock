@@ -4,12 +4,23 @@ set -euxo pipefail
 
 rm -rf build || true
 
+# get torch libraries for osx-arm64
+LIBTORCH_DIR=${BUILD_PREFIX}
+if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
+    LIBTORCH_DIR=${RECIPE_DIR}/libtorch
+    conda list -p ${BUILD_PREFIX} > packages.txt
+    cat packages.txt
+    PYTORCH_PACKAGE_VERSION=`grep pytorch packages.txt | awk -F ' ' '{print $2}'`
+    CONDA_SUBDIR=osx-arm64 conda create -y -p ${LIBTORCH_DIR} --no-deps pytorch=${PYTORCH_PACKAGE_VERSION} python=${PY_VER}
+fi
+
 CMAKE_FLAGS="  -DCMAKE_INSTALL_PREFIX=${PREFIX}"
 CMAKE_FLAGS+=" -DCMAKE_BUILD_TYPE=Release"
 
 CMAKE_FLAGS+=" -DBUILD_TESTING=ON"
 CMAKE_FLAGS+=" -DOPENMM_DIR=${PREFIX}"
 CMAKE_FLAGS+=" -DPYTORCH_DIR=${SP_DIR}/torch"
+CMAKE_FLAGS+=" -DTorch_DIR=${LIBTORCH_DIR}/lib/python${PY_VER}/site-packages/torch/share/cmake/Torch"
 # OpenCL
 CMAKE_FLAGS+=" -DNN_BUILD_OPENCL_LIB=ON"
 CMAKE_FLAGS+=" -DOPENCL_INCLUDE_DIR=${PREFIX}/include"
@@ -37,3 +48,8 @@ else
 fi
 cp -r tests ${PREFIX}/share/${PKG_NAME}/tests/
 ls -al ${PREFIX}/share/${PKG_NAME}/tests/
+
+if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
+    # clean up, otherwise, environment is stored in package
+    rm -fr ${LIBTORCH_DIR}
+fi
