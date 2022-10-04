@@ -8,34 +8,62 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_python3.10.____cpython:
-        CONFIG: osx_64_python3.10.____cpython
+      osx_64_python3.10.____cpythonpytorch_version1.11.0:
+        CONFIG: osx_64_python3.10.____cpythonpytorch_version1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.10.____cpython
-      osx_64_python3.7.____cpython:
-        CONFIG: osx_64_python3.7.____cpython
+        SHORT_CONFIG: osx_64_python3.10.____cpythonpytorc_hac981cc7f5
+      osx_64_python3.10.____cpythonpytorch_version1.12.0:
+        CONFIG: osx_64_python3.10.____cpythonpytorch_version1.12.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.7.____cpython
-      osx_64_python3.8.____cpython:
-        CONFIG: osx_64_python3.8.____cpython
+        SHORT_CONFIG: osx_64_python3.10.____cpythonpytorc_h93d99d819f
+      osx_64_python3.7.____cpythonpytorch_version1.11.0:
+        CONFIG: osx_64_python3.7.____cpythonpytorch_version1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.8.____cpython
-      osx_64_python3.9.____cpython:
-        CONFIG: osx_64_python3.9.____cpython
+        SHORT_CONFIG: osx_64_python3.7.____cpythonpytorch_h5491b5c0a4
+      osx_64_python3.7.____cpythonpytorch_version1.12.0:
+        CONFIG: osx_64_python3.7.____cpythonpytorch_version1.12.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.9.____cpython
-      osx_arm64_python3.10.____cpython:
-        CONFIG: osx_arm64_python3.10.____cpython
+        SHORT_CONFIG: osx_64_python3.7.____cpythonpytorch_hab33c5b745
+      osx_64_python3.8.____cpythonpytorch_version1.11.0:
+        CONFIG: osx_64_python3.8.____cpythonpytorch_version1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_python3.10.____cpython
-      osx_arm64_python3.8.____cpython:
-        CONFIG: osx_arm64_python3.8.____cpython
+        SHORT_CONFIG: osx_64_python3.8.____cpythonpytorch_he782a55870
+      osx_64_python3.8.____cpythonpytorch_version1.12.0:
+        CONFIG: osx_64_python3.8.____cpythonpytorch_version1.12.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_python3.8.____cpython
-      osx_arm64_python3.9.____cpython:
-        CONFIG: osx_arm64_python3.9.____cpython
+        SHORT_CONFIG: osx_64_python3.8.____cpythonpytorch_h4ef0b1be68
+      osx_64_python3.9.____cpythonpytorch_version1.11.0:
+        CONFIG: osx_64_python3.9.____cpythonpytorch_version1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_python3.9.____cpython
+        SHORT_CONFIG: osx_64_python3.9.____cpythonpytorch_h96ca03c723
+      osx_64_python3.9.____cpythonpytorch_version1.12.0:
+        CONFIG: osx_64_python3.9.____cpythonpytorch_version1.12.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_python3.9.____cpythonpytorch_hd600c7039c
+      osx_arm64_python3.10.____cpythonpytorch_version1.11.0:
+        CONFIG: osx_arm64_python3.10.____cpythonpytorch_version1.11.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_python3.10.____cpythonpyt_hf797b5c6d8
+      osx_arm64_python3.10.____cpythonpytorch_version1.12.0:
+        CONFIG: osx_arm64_python3.10.____cpythonpytorch_version1.12.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_python3.10.____cpythonpyt_h22ccde3f3e
+      osx_arm64_python3.8.____cpythonpytorch_version1.11.0:
+        CONFIG: osx_arm64_python3.8.____cpythonpytorch_version1.11.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_python3.8.____cpythonpyto_h9df343e681
+      osx_arm64_python3.8.____cpythonpytorch_version1.12.0:
+        CONFIG: osx_arm64_python3.8.____cpythonpytorch_version1.12.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_python3.8.____cpythonpyto_h5680dfab7c
+      osx_arm64_python3.9.____cpythonpytorch_version1.11.0:
+        CONFIG: osx_arm64_python3.9.____cpythonpytorch_version1.11.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_python3.9.____cpythonpyto_he0bf600a52
+      osx_arm64_python3.9.____cpythonpytorch_version1.12.0:
+        CONFIG: osx_arm64_python3.9.____cpythonpytorch_version1.12.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_python3.9.____cpythonpyto_hcf2f35e472
   timeoutInMinutes: 360
 
   steps:

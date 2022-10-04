@@ -26,6 +26,8 @@ python:
 - 3.10.* *_cpython
 pytorch:
 - '1.12'
+pytorch_version:
+- 1.11.0
 target_platform:
 - linux-64
 zip_keys:
