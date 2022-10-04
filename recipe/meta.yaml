@@ -47,7 +47,7 @@ requirements:
     # The first gets filled in by the global pinnings
     # The second gets the processor type
     - pytorch
-    - pytorch ={{ pytorch_version  }}={{ torch_proc_type }}*
+    - pytorch ={{ pytorch_version }}={{ torch_proc_type }}*
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
