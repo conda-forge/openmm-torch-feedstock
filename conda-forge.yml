@@ -8,3 +8,5 @@ build_platform:
 test_on_native_only: true
 azure:
   store_build_artifacts: true
+conda_build:
+  pkg_format: '2'
