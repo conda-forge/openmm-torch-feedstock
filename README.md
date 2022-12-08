@@ -41,266 +41,210 @@ Current build status
               <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.10.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.10.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.10.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.10.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.10.____cpythonpytorch1.12.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.7.____cpythonpytorch1.11.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.7.____cpythonpytorch1.11.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.7.____cpythonpytorch1.12.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.7.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.10.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.8.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.8.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.8.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.8.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.8.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.8.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.9.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.9.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.9.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.9.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.9.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.1cxx_compiler_version10python3.9.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.10.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.10.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.10.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.10.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.10.____cpythonpytorch1.12.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.7.____cpythonpytorch1.11.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.7.____cpythonpytorch1.11.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.7.____cpythonpytorch1.12.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.7.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.10.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.8.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.8.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.8.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.8.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.8.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.8.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.9.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.9.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.9.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.9.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.9.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version10cuda_compiler_version11.2cxx_compiler_version10python3.9.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.10.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.10.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.10.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.10.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.10.____cpythonpytorch1.12.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.7.____cpythonpytorch1.11.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.7.____cpythonpytorch1.11.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.7.____cpythonpytorch1.12.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.7.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.10.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.8.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.8.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.8.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.8.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.8.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.8.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.9.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.9.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.9.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.9.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.9.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version9cuda_compiler_version11.0cxx_compiler_version9python3.9.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.10.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.10.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.10.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.10.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.10.____cpythonpytorch1.12.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.7.____cpythonpytorch1.11.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.7.____cpythonpytorch1.11.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.7.____cpythonpytorch1.12.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.7.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.10.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.8.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.8.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.8.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.8.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.8.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.8.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.9.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.9.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.9.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.9.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.9.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.9.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_python3.10.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_python3.10.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.10.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_python3.10.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_python3.10.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.10.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_python3.8.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_python3.8.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.8.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_python3.8.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_python3.8.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.8.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_python3.9.____cpythonpytorch1.11.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_python3.9.____cpythonpytorch1.11.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.9.____cpythonpytorch1.11.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_python3.9.____cpythonpytorch1.12.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11624&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_python3.9.____cpythonpytorch1.12.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm-torch-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.9.____cpythonpytorch1.12.0" alt="variant">
                 </a>
               </td>
             </tr>
