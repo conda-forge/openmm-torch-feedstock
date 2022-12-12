@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "1.0beta" %}
+{% set version = "1.0beta1" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
@@ -10,10 +10,10 @@ package:
 
 source:
   git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: "5dc7279"
+  git_rev: "994f92fde4ce710a4db5557b6bc22756d5f9d2b1"
 
 build:
-  number: 1
+  number: 0
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}                                      # [cuda_compiler_version == "None"]
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
@@ -26,7 +26,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy >=1.19                           # [build_platform != target_platform]
-    - swig                                   # [build_platform != target_platform]
+    - swig <4.1                              # [build_platform != target_platform]
     - pytorch                                # [build_platform != target_platform]
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
     - openmm ==8.0.0beta                     # [build_platform != target_platform]
@@ -39,7 +39,7 @@ requirements:
   host:
     - python
     - pip
-    - swig
+    - swig <4.1
     - openmm ==8.0.0beta
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
@@ -55,7 +55,7 @@ requirements:
     - ocl-icd-system  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - ocl_icd_wrapper_apple      # [osx]
-  run_constrained:
+  #run_constrained:
     # 2022/02/05 hmaarrfk
     # While conda packaging seems to allow us to specify
     # constraints on the same package in different lines
@@ -65,7 +65,7 @@ requirements:
     # we add the GPU constraint in the run_constrained
     # to allow us to have "two" constraints on the
     # running package
-    - pytorch =*={{ torch_proc_type }}*
+    #- pytorch =*={{ torch_proc_type }}*
 
 test:
   imports:

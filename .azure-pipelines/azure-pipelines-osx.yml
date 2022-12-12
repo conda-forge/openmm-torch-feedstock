@@ -16,14 +16,6 @@ jobs:
         CONFIG: osx_64_python3.10.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_python3.10.____cpythonpytorch1.12.0
-      osx_64_python3.7.____cpythonpytorch1.11.0:
-        CONFIG: osx_64_python3.7.____cpythonpytorch1.11.0
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.7.____cpythonpytorch1.11.0
-      osx_64_python3.7.____cpythonpytorch1.12.0:
-        CONFIG: osx_64_python3.7.____cpythonpytorch1.12.0
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.7.____cpythonpytorch1.12.0
       osx_64_python3.8.____cpythonpytorch1.11.0:
         CONFIG: osx_64_python3.8.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
