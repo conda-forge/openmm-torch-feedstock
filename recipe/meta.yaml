@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "1.0beta" %}
+{% set version = "1.0rc1" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
@@ -13,10 +13,11 @@ source:
   git_rev: "994f92fde4ce710a4db5557b6bc22756d5f9d2b1"
 
 build:
-  number: 2
+  number: 0
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}                                      # [cuda_compiler_version == "None"]
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
+  skip: true  # [pytorch in ("1.11.0", "1.12.0") and py > 310]
   # as of pytorch 1.13, conda-forge only builds for CUDA 11.2+, see
   # https://github.com/conda-forge/conda-forge-pinning-feedstock/issues/3491
   skip: true  # [pytorch == "1.13.0" and cuda_compiler_version in ("10.2", "11.0", "11.1")]
@@ -32,7 +33,7 @@ requirements:
     - swig <4.1                              # [build_platform != target_platform]
     - pytorch                                # [build_platform != target_platform]
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
-    - openmm ==8.0.0beta                     # [build_platform != target_platform]
+    - openmm ==8.0.0rc1                      # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None')]
@@ -43,7 +44,7 @@ requirements:
     - python
     - pip
     - swig <4.1
-    - openmm ==8.0.0beta
+    - openmm ==8.0.0rc1
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     # Leaving two dependencies helps rerender correctly
