@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "1.0rc1" %}
+{% set version = "1.0" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
@@ -33,7 +33,7 @@ requirements:
     - swig <4.1                              # [build_platform != target_platform]
     - pytorch                                # [build_platform != target_platform]
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
-    - openmm ==8.0.0rc1                      # [build_platform != target_platform]
+    - openmm ==8.0.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None')]
@@ -44,7 +44,7 @@ requirements:
     - python
     - pip
     - swig <4.1
-    - openmm ==8.0.0rc1
+    - openmm ==8.0.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     # Leaving two dependencies helps rerender correctly
