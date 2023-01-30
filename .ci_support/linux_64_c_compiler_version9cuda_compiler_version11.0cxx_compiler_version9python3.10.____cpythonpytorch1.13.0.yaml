@@ -7,7 +7,7 @@ cdt_name:
 channel_sources:
 - conda-forge/label/openmm_rc,conda-forge
 channel_targets:
-- conda-forge openmm-torch_rc
+- conda-forge main
 cuda_compiler:
 - nvcc
 cuda_compiler_version:
