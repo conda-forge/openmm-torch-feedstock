@@ -49,7 +49,7 @@ fi
 
 # Generate test files
 mkdir -p ${PREFIX}/share/${PKG_NAME}/tests/tests
-cp tests/generate.py ${PREFIX}/share/${PKG_NAME}/tests/tests/
+cp ${SRC_DIR}/tests/generate.py ${PREFIX}/share/${PKG_NAME}/tests/tests/
 (cd ${PREFIX}/share/${PKG_NAME}/tests/tests/ && python generate.py)
 ls -l ${PREFIX}/share/${PKG_NAME}/tests
 ls -l ${PREFIX}/share/${PKG_NAME}/tests/tests
