@@ -48,9 +48,11 @@ else
 fi
 
 # Generate test files
-cp ${SRC_DIR}/tests/generate.py ${PREFIX}/share/${PKG_NAME}/tests
-(cd ${PREFIX}/share/${PKG_NAME}/tests && python generate.py)
+mkdir -p ${PREFIX}/share/${PKG_NAME}/tests/tests
+cp ${SRC_DIR}/tests/generate.py ${PREFIX}/share/${PKG_NAME}/tests/tests/
+(cd ${PREFIX}/share/${PKG_NAME}/tests/tests/ && python generate.py)
 ls -l ${PREFIX}/share/${PKG_NAME}/tests
+ls -l ${PREFIX}/share/${PKG_NAME}/tests/tests
 
 if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
     # clean up, otherwise, environment is stored in package
