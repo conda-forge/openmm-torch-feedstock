@@ -11,6 +11,8 @@ package:
 source:
   git_url: https://github.com/openmm/{{ name }}.git
   git_rev: "e196c8d52791e5b6e2e90b96e11a37893883e2f4"
+  patches:
+    - 0001-Fix-paths.patch
 
 build:
   number: 0
