@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/openmm/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/openmm/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: a39e76add88eb33c854ccd3d3b9afe65fef7f10797b9f736ee3dc8cdf6d03725
   patches:
     - 0001-Fix-paths.patch
