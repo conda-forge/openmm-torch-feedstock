@@ -46,8 +46,13 @@ if [[ "$target_platform" == osx* ]]; then
 else
     find . -name 'Test*' -executable -type f -exec cp {} ${PREFIX}/share/${PKG_NAME}/tests/ \;
 fi
-cp -r tests ${PREFIX}/share/${PKG_NAME}/tests/
-ls -al ${PREFIX}/share/${PKG_NAME}/tests/
+
+# Generate test files
+mkdir -p ${PREFIX}/share/${PKG_NAME}/tests/tests
+cp tests/gnerate.py ${PREFIX}/share/${PKG_NAME}/tests/tests/
+(cd ${PREFIX}/share/${PKG_NAME}/tests/tests/ && python generate.py)
+ls -l ${PREFIX}/share/${PKG_NAME}/tests
+ls -l ${PREFIX}/share/${PKG_NAME}/tests/tests
 
 if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
     # clean up, otherwise, environment is stored in package
