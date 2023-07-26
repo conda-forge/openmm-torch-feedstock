@@ -8,6 +8,10 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
+      osx_64_python3.10.____cpythonpytorch1.11.0:
+        CONFIG: osx_64_python3.10.____cpythonpytorch1.11.0
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_python3.10.____cpythonpytorch1.11.0
       osx_64_python3.10.____cpythonpytorch1.12.0:
         CONFIG: osx_64_python3.10.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -16,10 +20,10 @@ jobs:
         CONFIG: osx_64_python3.10.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_python3.10.____cpythonpytorch1.13.0
-      osx_64_python3.10.____cpythonpytorch2.0:
-        CONFIG: osx_64_python3.10.____cpythonpytorch2.0
+      osx_64_python3.11.____cpythonpytorch1.11.0:
+        CONFIG: osx_64_python3.11.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.10.____cpythonpytorch2.0
+        SHORT_CONFIG: osx_64_python3.11.____cpythonpytorch1.11.0
       osx_64_python3.11.____cpythonpytorch1.12.0:
         CONFIG: osx_64_python3.11.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -28,10 +32,10 @@ jobs:
         CONFIG: osx_64_python3.11.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_python3.11.____cpythonpytorch1.13.0
-      osx_64_python3.11.____cpythonpytorch2.0:
-        CONFIG: osx_64_python3.11.____cpythonpytorch2.0
+      osx_64_python3.8.____cpythonpytorch1.11.0:
+        CONFIG: osx_64_python3.8.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.11.____cpythonpytorch2.0
+        SHORT_CONFIG: osx_64_python3.8.____cpythonpytorch1.11.0
       osx_64_python3.8.____cpythonpytorch1.12.0:
         CONFIG: osx_64_python3.8.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -40,10 +44,10 @@ jobs:
         CONFIG: osx_64_python3.8.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_python3.8.____cpythonpytorch1.13.0
-      osx_64_python3.8.____cpythonpytorch2.0:
-        CONFIG: osx_64_python3.8.____cpythonpytorch2.0
+      osx_64_python3.9.____cpythonpytorch1.11.0:
+        CONFIG: osx_64_python3.9.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.8.____cpythonpytorch2.0
+        SHORT_CONFIG: osx_64_python3.9.____cpythonpytorch1.11.0
       osx_64_python3.9.____cpythonpytorch1.12.0:
         CONFIG: osx_64_python3.9.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -52,10 +56,10 @@ jobs:
         CONFIG: osx_64_python3.9.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_python3.9.____cpythonpytorch1.13.0
-      osx_64_python3.9.____cpythonpytorch2.0:
-        CONFIG: osx_64_python3.9.____cpythonpytorch2.0
+      osx_arm64_python3.10.____cpythonpytorch1.11.0:
+        CONFIG: osx_arm64_python3.10.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_python3.9.____cpythonpytorch2.0
+        SHORT_CONFIG: osx_arm64_python3.10.____cpythonpytorch1.11.0
       osx_arm64_python3.10.____cpythonpytorch1.12.0:
         CONFIG: osx_arm64_python3.10.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -64,10 +68,10 @@ jobs:
         CONFIG: osx_arm64_python3.10.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_python3.10.____cpythonpytorch1.13.0
-      osx_arm64_python3.10.____cpythonpytorch2.0:
-        CONFIG: osx_arm64_python3.10.____cpythonpytorch2.0
+      osx_arm64_python3.11.____cpythonpytorch1.11.0:
+        CONFIG: osx_arm64_python3.11.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_python3.10.____cpythonpytorch2.0
+        SHORT_CONFIG: osx_arm64_python3.11.____cpythonpytorch1.11.0
       osx_arm64_python3.11.____cpythonpytorch1.12.0:
         CONFIG: osx_arm64_python3.11.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -76,10 +80,10 @@ jobs:
         CONFIG: osx_arm64_python3.11.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_python3.11.____cpythonpytorch1.13.0
-      osx_arm64_python3.11.____cpythonpytorch2.0:
-        CONFIG: osx_arm64_python3.11.____cpythonpytorch2.0
+      osx_arm64_python3.8.____cpythonpytorch1.11.0:
+        CONFIG: osx_arm64_python3.8.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_python3.11.____cpythonpytorch2.0
+        SHORT_CONFIG: osx_arm64_python3.8.____cpythonpytorch1.11.0
       osx_arm64_python3.8.____cpythonpytorch1.12.0:
         CONFIG: osx_arm64_python3.8.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -88,10 +92,10 @@ jobs:
         CONFIG: osx_arm64_python3.8.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_python3.8.____cpythonpytorch1.13.0
-      osx_arm64_python3.8.____cpythonpytorch2.0:
-        CONFIG: osx_arm64_python3.8.____cpythonpytorch2.0
+      osx_arm64_python3.9.____cpythonpytorch1.11.0:
+        CONFIG: osx_arm64_python3.9.____cpythonpytorch1.11.0
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_python3.8.____cpythonpytorch2.0
+        SHORT_CONFIG: osx_arm64_python3.9.____cpythonpytorch1.11.0
       osx_arm64_python3.9.____cpythonpytorch1.12.0:
         CONFIG: osx_arm64_python3.9.____cpythonpytorch1.12.0
         UPLOAD_PACKAGES: 'True'
@@ -100,11 +104,6 @@ jobs:
         CONFIG: osx_arm64_python3.9.____cpythonpytorch1.13.0
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_python3.9.____cpythonpytorch1.13.0
-      osx_arm64_python3.9.____cpythonpytorch2.0:
-        CONFIG: osx_arm64_python3.9.____cpythonpytorch2.0
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_python3.9.____cpythonpytorch2.0
-    maxParallel: 20
   timeoutInMinutes: 360
 
   steps:
