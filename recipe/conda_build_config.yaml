@@ -1,8 +1,0 @@
-pytorch:
-  - 1.11.0
-  - 1.12.0
-  - 1.13.0
-channel_sources:
-- conda-forge/label/openmm_rc,conda-forge
-channel_targets:
-- conda-forge main

@@ -1,0 +1,33 @@
+From 6481ff16c536642bfc68f2f59ca2fece0dcf8b12 Mon Sep 17 00:00:00 2001
+From: Raimondas Galvelis <r.galvelis@acellera.com>
+Date: Wed, 26 Jul 2023 17:35:23 +0200
+Subject: [PATCH] Fix paths
+
+---
+ serialization/tests/TestSerializeTorchForce.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/serialization/tests/TestSerializeTorchForce.cpp b/serialization/tests/TestSerializeTorchForce.cpp
+index eb5f65c..124e283 100644
+--- a/serialization/tests/TestSerializeTorchForce.cpp
++++ b/serialization/tests/TestSerializeTorchForce.cpp
+@@ -76,14 +76,14 @@ void serializeAndDeserialize(TorchForce force) {
+ }
+ 
+ void testSerializationFromModule() {
+-    string fileName = "../../tests/forces.pt";
++    string fileName = "tests/forces.pt";
+     torch::jit::Module module = torch::jit::load(fileName);
+     TorchForce force(module);
+     serializeAndDeserialize(force);
+ }
+ 
+ void testSerializationFromFile() {
+-    string fileName = "../../tests/forces.pt";
++    string fileName = "tests/forces.pt";
+     TorchForce force(fileName);
+     serializeAndDeserialize(force);
+ }
+-- 
+2.34.1
+
