@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/openmm/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a39e76add88eb33c854ccd3d3b9afe65fef7f10797b9f736ee3dc8cdf6d03725
+  sha256: ad51ce1e679ca3d3dae61db54a404fcd3b7774c7ee2f93f0bb28cc773787a720
   patches:
     - 0001-Fix-paths.patch
 
