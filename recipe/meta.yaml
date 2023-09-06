@@ -34,7 +34,7 @@ requirements:
     - openmm >=8.0.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None') and not aarch64]
+    - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None')]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - cmake
     - make
