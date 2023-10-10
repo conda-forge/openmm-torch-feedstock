@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "1.3" %}
+{% set version = "1.4" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
@@ -10,14 +10,14 @@ package:
 
 source:
   url: https://github.com/openmm/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0ee62f411b6035ee0e9e6dee987ed0ca687949bab2ee15b02c3f52d840dc609d
+  sha256: c8270d08ae13a0af7050997964447236d6c93eb611b89e1de9c4ca3b3a4aaab5
   patches:
     - 0001-Fix-paths.patch
 
 build:
   number: 0
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
-  string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}                                      # [cuda_compiler_version == "None"]
+  string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [win]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
   rpaths:
