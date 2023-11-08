@@ -45,13 +45,8 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     {% if cuda_major >= 12 %}
     - cuda-driver-dev
-    - cuda-cudart-dev
     - cuda-nvrtc-dev
-    - cuda-nvtx-dev
-    - cuda-nvml-dev
-    - libcublas-dev
     - libcufft-dev
-    - libcurand-dev
     {% endif %}
     - cmake
     - make
