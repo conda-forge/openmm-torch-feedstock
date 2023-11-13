@@ -4,6 +4,12 @@
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
 
+{% if cuda_compiler_version in (None, "None", True, False) %}
+{% set cuda_major = 0 %}
+{% else %}
+{% set cuda_major = environ.get("cuda_compiler_version", "11.8").split(".")[0] | int %}
+{% endif %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -15,7 +21,7 @@ source:
     - 0001-Fix-paths.patch
 
 build:
-  number: 0
+  number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [win]
@@ -37,6 +43,11 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None')]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    {% if cuda_major >= 12 %}
+    - cuda-driver-dev
+    - cuda-nvrtc-dev
+    - libcufft-dev
+    {% endif %}
     - cmake
     - make
   host:
@@ -51,6 +62,16 @@ requirements:
     # The second gets the processor type
     - pytorch
     - pytorch =*={{ torch_proc_type }}*
+    {% if cuda_major >= 12 %}
+    - cuda-driver-dev
+    - cuda-cudart-dev
+    - cuda-nvrtc-dev
+    - cuda-nvtx-dev
+    - cuda-nvml-dev
+    - libcublas-dev
+    - libcufft-dev 
+    - libcurand-dev
+    {% endif %}
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
@@ -117,3 +138,4 @@ extra:
     - jaimergp
     - peastman
     - mikemhenry
+    - RaulPPelaez
