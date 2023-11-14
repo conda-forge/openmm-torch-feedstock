@@ -29,3 +29,32 @@ index 8573ec3..4c4e83a 100644
  
  # Set flags for linking on mac
  IF(APPLE)
+diff --git a/python/CMakeLists.txt b/python/CMakeLists.txt
+index ee0c19d..65593c5 100644
+--- a/python/CMakeLists.txt
++++ b/python/CMakeLists.txt
+@@ -23,6 +23,7 @@ add_custom_command(
+ add_custom_target(PythonInstall DEPENDS "${WRAP_FILE}"  "${CMAKE_CURRENT_SOURCE_DIR}/setup.py")
+ set(NN_PLUGIN_HEADER_DIR "${CMAKE_SOURCE_DIR}/openmmapi/include")
+ set(NN_PLUGIN_LIBRARY_DIR "${CMAKE_BINARY_DIR}")
++set(EXTENSION_CXX_STANDARD ${CMAKE_CXX_STANDARD})
+ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/setup.py ${CMAKE_CURRENT_BINARY_DIR}/setup.py)
+ add_custom_command(TARGET PythonInstall
+     COMMAND "${PYTHON_EXECUTABLE}" -m pip install .
+diff --git a/python/setup.py b/python/setup.py
+index 4d03efe..6748a57 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -6,10 +6,11 @@ openmm_dir = '@OPENMM_DIR@'
+ torch_include_dirs = '@TORCH_INCLUDE_DIRS@'.split(';')
+ nn_plugin_header_dir = '@NN_PLUGIN_HEADER_DIR@'
+ nn_plugin_library_dir = '@NN_PLUGIN_LIBRARY_DIR@'
++cpp_std = '@EXTENSION_CXX_STANDARD@'
+ torch_dir, _ = os.path.split('@TORCH_LIBRARY@')
+ 
+ # setup extra compile and link arguments on Mac
+-extra_compile_args = ['-std=c++14']
++extra_compile_args = ['-std=c++' + cpp_std]
+ extra_link_args = []
+ 
+ if platform.system() == 'Darwin':
