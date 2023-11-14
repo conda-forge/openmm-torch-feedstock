@@ -19,7 +19,7 @@ source:
   sha256: c8270d08ae13a0af7050997964447236d6c93eb611b89e1de9c4ca3b3a4aaab5
   patches:
     - 0001-Fix-paths.patch
-
+    - 0002-Cpp17.patch
 build:
   number: 2
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
