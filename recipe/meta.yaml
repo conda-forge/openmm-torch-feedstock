@@ -54,7 +54,7 @@ requirements:
   host:
     - python
     - pip
-    - swig <4.1
+    - swig
     - openmm >=8.0.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
