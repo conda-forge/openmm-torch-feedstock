@@ -79,7 +79,7 @@ requirements:
     - ocl-icd-system  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - ocl_icd_wrapper_apple      # [osx]
-  #run_constrained:
+  run_constrained:
     # 2022/02/05 hmaarrfk
     # While conda packaging seems to allow us to specify
     # constraints on the same package in different lines
@@ -89,7 +89,7 @@ requirements:
     # we add the GPU constraint in the run_constrained
     # to allow us to have "two" constraints on the
     # running package
-    #- pytorch =*={{ torch_proc_type }}*
+    - pytorch =*={{ torch_proc_type }}*
 
 test:
   imports:
