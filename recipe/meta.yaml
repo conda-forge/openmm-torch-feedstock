@@ -48,6 +48,7 @@ requirements:
     - cuda-nvrtc-dev
     - libcufft-dev
     {% endif %}
+    - cuda-version =={{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - cmake
     - make
   host:
@@ -62,6 +63,7 @@ requirements:
     # The second gets the processor type
     - pytorch
     - pytorch =*={{ torch_proc_type }}*
+    - cuda-version =={{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     {% if cuda_major >= 12 %}
     - cuda-driver-dev
     - cuda-cudart-dev
