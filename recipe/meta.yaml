@@ -21,7 +21,7 @@ source:
     - 0001-Fix-paths.patch
     - 0002-Cpp17.patch
 build:
-  number: 4
+  number: 5
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [win]
@@ -40,6 +40,7 @@ requirements:
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
     - openmm >=8.0.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None')]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
