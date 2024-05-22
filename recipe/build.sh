@@ -29,6 +29,9 @@ CMAKE_FLAGS+=" -DOPENCL_LIBRARY=${PREFIX}/lib/libOpenCL${SHLIB_EXT}"
 # if CUDA_HOME is defined and not empty, we enable CUDA
 if [[ -n ${CUDA_HOME-} ]]; then
     CMAKE_FLAGS+=" -DNN_BUILD_CUDA_LIB=ON"
+    # Manually list CUDA archs to avoid an issue with Pytorch CMake
+    # xref https://github.com/pytorch/pytorch/issues/113948
+    export TORCH_CUDA_ARCH_LIST="5.0 8.0 8.6 8.9 9.0"
 fi
 
 # Build in subdirectory and install.
