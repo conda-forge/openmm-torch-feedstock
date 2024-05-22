@@ -20,6 +20,7 @@ source:
   patches:
     - 0001-Fix-paths.patch
     - 0002-Cpp17.patch
+    - 0003-setup-py-macos.patch
 build:
   number: 5
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
