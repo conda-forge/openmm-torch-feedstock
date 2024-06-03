@@ -20,8 +20,9 @@ source:
   patches:
     - 0001-Fix-paths.patch
     - 0002-Cpp17.patch
+    - 0003-setup-py-macos.patch
 build:
-  number: 4
+  number: 5
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [win]
@@ -40,15 +41,21 @@ requirements:
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
     - openmm >=8.0.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None')]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     {% if cuda_major >= 12 %}
-    - cuda-driver-dev
-    - cuda-nvrtc-dev
     - libcufft-dev
+    - cuda-driver-dev
+    - cuda-cudart-dev
+    - cuda-nvrtc-dev
+    - cuda-nvtx-dev
+    - cuda-nvml-dev
+    - libcublas-dev
+    - libcurand-dev
     {% endif %}
-    - cuda-version =={{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
+    - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - cmake
     - make
   host:
@@ -58,22 +65,7 @@ requirements:
     - openmm >=8.0.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
-    # Leaving two dependencies helps rerender correctly
-    # The first gets filled in by the global pinnings
-    # The second gets the processor type
-    - pytorch
     - pytorch =*={{ torch_proc_type }}*
-    - cuda-version =={{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
-    {% if cuda_major >= 12 %}
-    - cuda-driver-dev
-    - cuda-cudart-dev
-    - cuda-nvrtc-dev
-    - cuda-nvtx-dev
-    - cuda-nvml-dev
-    - libcublas-dev
-    - libcufft-dev 
-    - libcurand-dev
-    {% endif %}
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
