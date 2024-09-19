@@ -57,6 +57,7 @@ requirements:
     - make
   host:
     - python
+    - setuptools
     - pip
     - swig
     - openmm >=8.0.0
