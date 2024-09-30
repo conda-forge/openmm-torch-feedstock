@@ -22,14 +22,11 @@ source:
     - 0002-Cpp17.patch
     - 0003-setup-py-macos.patch
 build:
-  number: 5
+  number: 6
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [win]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
-  rpaths:
-    - lib/
-    - {{ SP_DIR }}/torch/lib
 
 requirements:
   build:
@@ -60,6 +57,7 @@ requirements:
     - make
   host:
     - python
+    - setuptools
     - pip
     - swig
     - openmm >=8.0.0
