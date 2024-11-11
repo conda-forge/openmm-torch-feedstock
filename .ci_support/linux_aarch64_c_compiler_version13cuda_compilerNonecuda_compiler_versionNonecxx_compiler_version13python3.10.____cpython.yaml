@@ -11,7 +11,7 @@ c_stdlib_version:
 cdt_arch:
 - aarch64
 cdt_name:
-- cos7
+- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -26,6 +26,8 @@ cxx_compiler_version:
 - '13'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
+orc:
+- 2.0.2
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -38,7 +40,6 @@ zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
   - c_stdlib_version
-  - cdt_name
   - cuda_compiler
   - cuda_compiler_version
   - docker_image
