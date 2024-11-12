@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "1.4" %}
+{% set version = "1.5" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
@@ -15,14 +15,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/openmm/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: c8270d08ae13a0af7050997964447236d6c93eb611b89e1de9c4ca3b3a4aaab5
-  patches:
-    - 0001-Fix-paths.patch
-    - 0002-Cpp17.patch
-    - 0003-setup-py-macos.patch
+  git_url: https://github.com/openmm/{{ name }}.git
+  git_rev: "9ef733c"
 build:
-  number: 6
+  number: 0
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [win]
@@ -36,7 +32,7 @@ requirements:
     - swig                                   # [build_platform != target_platform]
     - pytorch                                # [build_platform != target_platform]
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
-    - openmm >=8.0.0                         # [build_platform != target_platform]
+    - openmm >=8.2.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
@@ -60,7 +56,7 @@ requirements:
     - setuptools
     - pip
     - swig
-    - openmm >=8.0.0
+    - openmm >=8.2.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - pytorch =*={{ torch_proc_type }}*
