@@ -2,7 +2,7 @@
 {% set version = "1.5" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
-{% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
+{% set torch_proc_type = "gpu" if cuda_compiler_version != "None" else "cpu" %}
 
 {% if cuda_compiler_version in (None, "None", True, False) %}
 {% set cuda_major = 0 %}
@@ -29,8 +29,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy >=1.19                           # [build_platform != target_platform]
     - swig                                   # [build_platform != target_platform]
-    - pytorch                                # [build_platform != target_platform]
-    - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
+    - pytorch-{{ torch_proc_type }}          # [build_platform != target_platform]
     - openmm >=8.2.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
@@ -58,7 +57,7 @@ requirements:
     - openmm >=8.2.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
-    - pytorch =*={{ torch_proc_type }}*
+    - pytorch-{{ torch_proc_type }}
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
@@ -76,7 +75,7 @@ requirements:
     # we add the GPU constraint in the run_constrained
     # to allow us to have "two" constraints on the
     # running package
-    - pytorch =*={{ torch_proc_type }}*
+    - pytorch-{{ torch_proc_type }}
 
 test:
   imports:
