@@ -10,7 +10,7 @@ if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
     LIBTORCH_DIR=${RECIPE_DIR}/libtorch
     conda list -p ${BUILD_PREFIX} > packages.txt
     cat packages.txt
-    PYTORCH_PACKAGE_VERSION=`grep pytorch packages.txt | awk -F ' ' '{print $2}'`
+    PYTORCH_PACKAGE_VERSION=`grep pytorch packages.txt | head -n 1 | awk -F ' ' '{print $2}'`
     CONDA_SUBDIR=osx-arm64 conda create -y -p ${LIBTORCH_DIR} --no-deps pytorch=${PYTORCH_PACKAGE_VERSION} python=${PY_VER}
 fi
 
