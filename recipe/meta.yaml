@@ -81,7 +81,7 @@ requirements:
     # we add the GPU constraint in the run_constrained
     # to allow us to have "two" constraints on the
     # running package
-    - pytorch-{{ torch_proc_type }}
+    - pytorch =*={{ torch_proc_type }}*
 
 test:
   imports:
