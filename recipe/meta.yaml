@@ -21,7 +21,6 @@ build:
   number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
-  skip: true  # [win]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
 
 requirements:
@@ -40,7 +39,7 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     {% if cuda_major >= 12 %}
     - libcufft-dev
-    - cuda-driver-dev
+    - cuda-driver-dev   # [linux]
     - cuda-cudart-dev
     - cuda-nvrtc-dev
     - cuda-nvtx-dev
