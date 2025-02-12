@@ -59,6 +59,7 @@ requirements:
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - pytorch =*={{ torch_proc_type }}*
+    - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
