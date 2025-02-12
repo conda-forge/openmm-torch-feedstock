@@ -22,7 +22,7 @@ set "CMAKE_FLAGS=!CMAKE_FLAGS! -DOPENCL_LIBRARY=%PREFIX%/lib/OpenCL.lib"
 set "CMAKE_FLAGS=!CMAKE_FLAGS! -DCMAKE_CXX_STANDARD=17"
 set "CMAKE_FLAGS=!CMAKE_FLAGS! -DCMAKE_CXX_STANDARD_REQUIRED=ON"
 :: Set NOMINMAX which is required by pytorch to compile on Windows https://github.com/pytorch/pytorch/blob/ce80865f134c621051afc7e30e4a71cacf3cfaf1/c10/util/C%2B%2B17.h#L28
-set "CMAKE_FLAGS=!CMAKE_FLAGS! -DNOMINMAX"
+set "CMAKE_FLAGS=!CMAKE_FLAGS! -DNOMINMAX=ON"
 
 :: CUDA configuration
 if "%cuda_compiler_version%" == "None" (
