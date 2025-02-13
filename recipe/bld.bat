@@ -16,8 +16,8 @@ set "CMAKE_FLAGS=!CMAKE_FLAGS! -DPYTORCH_DIR=%SP_DIR%/torch"
 set "CMAKE_FLAGS=!CMAKE_FLAGS! -DTorch_DIR=%SP_DIR%/torch/share/cmake/Torch"
 :: OpenCL flags
 set "CMAKE_FLAGS=!CMAKE_FLAGS! -DNN_BUILD_OPENCL_LIB=ON"
-set "CMAKE_FLAGS=!CMAKE_FLAGS! -DOPENCL_INCLUDE_DIR=%PREFIX%/include"
-set "CMAKE_FLAGS=!CMAKE_FLAGS! -DOPENCL_LIBRARY=%PREFIX%/lib/OpenCL.lib"
+set "CMAKE_FLAGS=!CMAKE_FLAGS! -DOPENCL_INCLUDE_DIR=%PREFIX%/Library/include"
+set "CMAKE_FLAGS=!CMAKE_FLAGS! -DOPENCL_LIBRARY=%PREFIX%/Library/lib/OpenCL.lib"
 
 :: CUDA configuration
 if "%cuda_compiler_version%" == "None" (
