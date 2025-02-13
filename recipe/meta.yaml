@@ -60,7 +60,7 @@ requirements:
     - khronos-opencl-icd-loader  # [osx]
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - pthread-stubs
+    - pthreads-win32  # [win]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
