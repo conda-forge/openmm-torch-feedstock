@@ -16,7 +16,7 @@ package:
 
 source:
   git_url: https://github.com/stefdoerr/{{ name }}.git
-  git_rev: "c69b68a0736a1dcb575622bc052f9323359444fd"
+  git_rev: "ba23b7e3fd9d89b1ce561d19484b7eea11da85f7"
 build:
   number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
@@ -61,6 +61,7 @@ requirements:
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - pthreads-win32  # [win]
+    - cuda-cudart-dev                           # [(cuda_compiler_version or "").startswith("12") and win]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
