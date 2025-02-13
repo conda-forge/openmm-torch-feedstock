@@ -15,8 +15,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: "9ef733c"
+  git_url: https://github.com/stefdoerr/{{ name }}.git
+  git_rev: "521020df64a91c48d0d747551bfddf786f244147"
 build:
   number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
