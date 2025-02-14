@@ -22,8 +22,17 @@ for ff in files:
         print(f"Running {ff}...")
 
         # Run the test and capture return code
-        result = subprocess.run(ff, shell=True)
+        result = subprocess.run(f"./{ff}", shell=True, capture_output=True)
         thisexitcode = result.returncode
+
+        # Print stdout and stderr if process failed
+        if thisexitcode != 0:
+            if result.stdout:
+                print("STDOUT:")
+                print(result.stdout)
+            if result.stderr:
+                print("STDERR:")
+                print(result.stderr)
 
         # Build summary string
         summary += f"\n{ff}: {'OK' if thisexitcode == 0 else 'FAILED'}"
