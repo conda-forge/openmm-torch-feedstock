@@ -50,7 +50,6 @@ requirements:
     - cuda-nvcc-dev_win-64    # [win]
     - cuda-crt-dev_win-64     # [win]
     - cuda-nvvm-dev_win-64    # [win]
-    - cudatoolkit ={{ cuda_compiler_version }} # [win]
     {% endif %}
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - cmake
@@ -79,7 +78,6 @@ requirements:
     - cuda-nvcc-dev_win-64    # [win]
     - cuda-crt-dev_win-64     # [win]
     - cuda-nvvm-dev_win-64    # [win]
-    - cudatoolkit ={{ cuda_compiler_version }} # [win]
     {% endif %}
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
   run:
