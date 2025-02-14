@@ -1,5 +1,4 @@
 import os
-import subprocess
 import sys
 
 # Change to the tests directory
@@ -23,24 +22,13 @@ for ff in files:
 
         # Run the test and capture return code
         cmd = ff if sys.platform == "win32" else f"./{ff}"
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        thisexitcode = result.returncode
-
-        # Print stdout and stderr if process failed
-        if thisexitcode != 0:
-            if result.stdout:
-                print("STDOUT:")
-                print(result.stdout)
-            if result.stderr:
-                print("STDERR:")
-                print(result.stderr)
+        exitcode = os.system(cmd)
 
         # Build summary string
-        summary += f"\n{ff}: {'OK' if thisexitcode == 0 else 'FAILED'}"
-        exitcode += thisexitcode
+        summary += f"\n{ff}: {'OK' if exitcode == 0 else 'FAILED'}"
+        exitcode += exitcode
 
 # Print summary
-print("-------\nSummary\n-------")
-print(summary)
+print(f"-------\nSummary\n-------{summary}\n")
 
 sys.exit(exitcode)
