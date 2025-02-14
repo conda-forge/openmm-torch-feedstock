@@ -3,35 +3,34 @@ import subprocess
 import sys
 
 # Change to the tests directory
-os.chdir(os.path.join(os.environ["CONDA_PREFIX"], "share", "openmmtorch", "tests"))
+os.chdir(os.path.join(os.environ["PREFIX"], "share", "openmmtorch", "tests"))
 
-# List directory contents (equivalent to ls -al)
-print(subprocess.check_output(["ls", "-al"]).decode())
+# List directory contents
+files = os.listdir(".")
+print(files)
 
 summary = ""
 exitcode = 0
 
 # Iterate through test files
-for f in os.listdir("."):
-    if f.startswith("Test"):
+for ff in files:
+    if ff.startswith("Test"):
         # Skip CUDA and OpenCL tests
-        if "Cuda" in f or "OpenCL" in f:
+        if "Cuda" in ff or "OpenCL" in ff:
             continue
 
-        print(f"Running {f}...")
+        print(f"Running {ff}...")
 
         # Run the test and capture return code
-        result = subprocess.run(f"./{f}", shell=True)
+        result = subprocess.run([sys.executable, ff], shell=True)
         thisexitcode = result.returncode
 
         # Build summary string
-        summary += f"\n{f}: {'OK' if thisexitcode == 0 else 'FAILED'}"
+        summary += f"\n{ff}: {'OK' if thisexitcode == 0 else 'FAILED'}"
         exitcode += thisexitcode
 
 # Print summary
-print("-------")
-print("Summary")
-print("-------")
+print("-------\nSummary\n-------")
 print(summary)
 
 sys.exit(exitcode)
