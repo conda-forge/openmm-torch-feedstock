@@ -22,7 +22,7 @@ for ff in files:
         print(f"Running {ff}...")
 
         # Run the test and capture return code
-        result = subprocess.run([sys.executable, ff], shell=True)
+        result = subprocess.run(ff, shell=True)
         thisexitcode = result.returncode
 
         # Build summary string
