@@ -46,6 +46,10 @@ requirements:
     - cuda-nvml-dev
     - libcublas-dev
     - libcurand-dev
+    - cuda-cccl_win-64        # [win]
+    - cuda-nvcc-dev_win-64    # [win]
+    - cuda-crt-dev_win-64     # [win]
+    - cuda-nvvm-dev_win-64    # [win]
     {% endif %}
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - cmake
