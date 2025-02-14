@@ -59,6 +59,7 @@ requirements:
     - openmm >=8.2.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
+    - pytorch
     - pytorch =*={{ torch_proc_type }}*
   run:
     - python
