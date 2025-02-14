@@ -18,7 +18,7 @@ source:
   git_url: https://github.com/stefdoerr/{{ name }}.git
   git_rev: "f61804a6e62ebf513365d8b35285781510eb37ce"
 build:
-  number: 2
+  number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
