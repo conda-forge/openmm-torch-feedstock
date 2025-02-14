@@ -46,10 +46,6 @@ requirements:
     - cuda-nvml-dev
     - libcublas-dev
     - libcurand-dev
-    - cuda-cccl_win-64        # [win]
-    - cuda-nvcc-dev_win-64    # [win]
-    - cuda-crt-dev_win-64     # [win]
-    - cuda-nvvm-dev_win-64    # [win]
     {% endif %}
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - cmake
@@ -65,21 +61,6 @@ requirements:
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - pthreads-win32  # [win]
-    {% if cuda_major >= 12 %}
-    - libcufft-dev
-    - cuda-driver-dev   # [linux]
-    - cuda-cudart-dev
-    - cuda-nvrtc-dev
-    - cuda-nvtx-dev
-    - cuda-nvml-dev
-    - libcublas-dev
-    - libcurand-dev
-    - cuda-cccl_win-64        # [win]
-    - cuda-nvcc-dev_win-64    # [win]
-    - cuda-crt-dev_win-64     # [win]
-    - cuda-nvvm-dev_win-64    # [win]
-    {% endif %}
-    - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
