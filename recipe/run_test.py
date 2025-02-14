@@ -22,7 +22,8 @@ for ff in files:
         print(f"Running {ff}...")
 
         # Run the test and capture return code
-        result = subprocess.run(f"./{ff}", shell=True, capture_output=True)
+        cmd = ff if sys.platform == "win32" else f"./{ff}"
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
         thisexitcode = result.returncode
 
         # Print stdout and stderr if process failed
