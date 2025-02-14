@@ -3,7 +3,7 @@ import subprocess
 import sys
 
 # Change to the tests directory
-os.chdir(os.path.join(os.environ["PREFIX"], "share", "openmmtorch", "tests"))
+os.chdir(os.path.join(os.environ["CONDA_PREFIX"], "share", "openmm-torch", "tests"))
 
 # List directory contents
 files = os.listdir(".")
