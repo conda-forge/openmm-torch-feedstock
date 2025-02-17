@@ -1,11 +1,19 @@
 import os
 import sys
+import subprocess
+
+if sys.platform == "win32":
+    # Needed for the test exe files to find the OpenMMTorch.dll file
+    libpath = os.path.join(os.environ["CONDA_PREFIX"], "Library", "lib")
+    _path = os.environ["PATH"]
+    os.environ["PATH"] = f"{libpath};{libpath}\plugins;{_path}"
+    os.add_dll_directory(libpath)
 
 # Change to the tests directory
-os.chdir(os.path.join(os.environ["CONDA_PREFIX"], "share", "openmm-torch", "tests"))
+test_dir = os.path.join(os.environ["CONDA_PREFIX"], "share", "openmm-torch", "tests")
 
 # List directory contents
-files = os.listdir(".")
+files = os.listdir(test_dir)
 print(files)
 
 summary = ""
@@ -21,12 +29,13 @@ for ff in files:
         print(f"Running {ff}...")
 
         # Run the test and capture return code
-        cmd = ff if sys.platform == "win32" else f"./{ff}"
-        exitcode = os.system(cmd)
+        exitc = subprocess.run(
+            os.path.join(test_dir, ff), env=os.environ, cwd=test_dir
+        ).returncode
 
         # Build summary string
-        summary += f"\n{ff}: {'OK' if exitcode == 0 else 'FAILED'}"
-        exitcode += exitcode
+        summary += f"\n{ff}: {'OK' if exitc == 0 else 'FAILED'}"
+        exitcode += exitc
 
 # Print summary
 print(f"-------\nSummary\n-------{summary}\n")
