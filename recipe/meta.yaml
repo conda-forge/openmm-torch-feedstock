@@ -16,7 +16,7 @@ package:
 
 source:
   git_url: https://github.com/stefdoerr/{{ name }}.git
-  git_rev: "268500b9e970f547b974da0d07c595bd09c7d3f1"
+  git_rev: "7b0dfd495154c9334b06e5c8eb270d093a371c93"
 build:
   number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
