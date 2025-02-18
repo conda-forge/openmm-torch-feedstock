@@ -8,8 +8,7 @@ mkdir build
 cd build
 
 :: Set up CMake flags
-set "CMAKE_FLAGS=-DBUILD_TESTING=ON"
-set "CMAKE_FLAGS=!CMAKE_FLAGS! -DOPENMM_DIR=%PREFIX%/Library"
+set "CMAKE_FLAGS=-DOPENMM_DIR=%PREFIX%/Library"
 set "CMAKE_FLAGS=!CMAKE_FLAGS! -DPYTORCH_DIR=%SP_DIR%/torch"
 set "CMAKE_FLAGS=!CMAKE_FLAGS! -DTorch_DIR=%SP_DIR%/torch/share/cmake/Torch"
 set "CMAKE_FLAGS=!CMAKE_FLAGS! -DNN_BUILD_PYTHON_WRAPPERS=ON"
@@ -24,12 +23,16 @@ if "%cuda_compiler_version%" == "None" (
 ) else (
     :: Get CUDA architecture list from PyTorch
     for /f "tokens=*" %%i in ('python -c "import torch; print(';'.join([f'{y[0]}.{y[1]}' for y in [x[3:] for x in torch._C._cuda_getArchFlags().split() if x.startswith('sm_')]]))"') do set "ARCH_LIST=%%i"
+    
     set "CMAKE_FLAGS=!CMAKE_FLAGS! -DTORCH_CUDA_ARCH_LIST=!ARCH_LIST!"
     set "TORCH_NVCC_FLAGS=-Xfatbin -compress-all"
     set MAGMA_HOME=%LIBRARY_PREFIX%
     set "PATH=%CUDA_BIN_PATH%;%PATH%"
     set CUDNN_INCLUDE_DIR=%LIBRARY_PREFIX%\include
     set "CUDA_VERSION=%cuda_compiler_version%"
+
+    :: Add CUDA driver library to linker
+    set "CMAKE_FLAGS=!CMAKE_FLAGS! -DCUDA_DRIVER_LIBRARY_PATH=%BUILD_PREFIX%/Library/lib/"
 )
 
 set CMAKE_INCLUDE_PATH=%LIBRARY_PREFIX%\include
