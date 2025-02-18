@@ -17,6 +17,9 @@ package:
 source:
   git_url: https://github.com/stefdoerr/{{ name }}.git
   git_rev: "7b0dfd495154c9334b06e5c8eb270d093a371c93"
+  patches:
+    - patches/0001-avoid-deprecated-find_package-CUDA-in-caffe2-CMake-m.patch
+
 build:
   number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
