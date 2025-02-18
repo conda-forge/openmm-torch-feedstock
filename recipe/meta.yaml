@@ -57,11 +57,12 @@ requirements:
     - pip
     - swig
     - openmm >=8.2.0
-    - ocl-icd  # [linux]
-    - khronos-opencl-icd-loader  # [osx]
+    - ocl-icd                                   # [linux]
+    - khronos-opencl-icd-loader                 # [osx]
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - pthreads-win32  # [win]
+    - nvtx-c                                    # [cuda_compiler_version not in (undefined, 'None') and win]
+    - pthreads-win32                            # [win]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
