@@ -24,7 +24,7 @@ if "%cuda_compiler_version%" == "None" (
 ) else (
     :: Get CUDA architecture list from PyTorch
     for /f "tokens=*" %%i in ('python -c "import torch; print(';'.join([f'{y[0]}.{y[1]}' for y in [x[3:] for x in torch._C._cuda_getArchFlags().split() if x.startswith('sm_')]]))"') do set "ARCH_LIST=%%i"
-    set "TORCH_CUDA_ARCH_LIST=!ARCH_LIST!"
+    set "CMAKE_FLAGS=!CMAKE_FLAGS! -DTORCH_CUDA_ARCH_LIST=!ARCH_LIST!"
     set "TORCH_NVCC_FLAGS=-Xfatbin -compress-all"
     set MAGMA_HOME=%LIBRARY_PREFIX%
     set "PATH=%CUDA_BIN_PATH%;%PATH%"
@@ -54,6 +54,8 @@ set "CPPFLAGS=%CPPFLAGS% %CUDA_CFLAGS%"
 set "CXXFLAGS=%CXXFLAGS% %CUDA_CFLAGS%"
 echo "CUDA_CFLAGS=%CUDA_CFLAGS%"
 echo "CXXFLAGS=%CXXFLAGS%"
+
+set "CMAKE_FLAGS=!CMAKE_FLAGS! -DUSE_SYSTEM_NVTX=1"
 
 :: Configure and build
 cmake %CMAKE_ARGS% %CMAKE_FLAGS% %SRC_DIR%
