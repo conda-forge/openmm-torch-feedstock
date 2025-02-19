@@ -18,11 +18,12 @@ source:
   git_url: https://github.com/stefdoerr/{{ name }}.git
   git_rev: "0f7db472ffc2afdb4a6a2cb46f9d0cf01880d37c"
 build:
-  number: 1
+  number: 2
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
-  skip: true  # [win and (cuda_compiler_version or "").startswith("11")]
+  # pytorch in conda-forge does not support CUDA 11.8 anymore
+  skip: true  # [cuda_compiler_version == "11.8"]
 
 requirements:
   build:
@@ -57,8 +58,9 @@ requirements:
     - pip
     - swig
     - openmm >=8.2.0
-    - ocl-icd                                   # [linux]
-    - khronos-opencl-icd-loader                 # [osx]
+    - ocl-icd  # [linux]
+    - khronos-opencl-icd-loader  # [osx]
+    - pytorch
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - nvtx-c                                    # [cuda_compiler_version not in (undefined, 'None') and win]
