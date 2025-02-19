@@ -15,10 +15,10 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/stefdoerr/{{ name }}.git
-  git_rev: "0f7db472ffc2afdb4a6a2cb46f9d0cf01880d37c"
+  git_url: https://github.com/openmm/{{ name }}.git
+  git_rev: "d1861af"
 build:
-  number: 2
+  number: 3
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
