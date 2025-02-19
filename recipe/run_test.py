@@ -1,6 +1,7 @@
 import os
 import sys
 import subprocess
+import openmmtorch
 
 if sys.platform == "win32":
     # Needed for the test exe files to find the OpenMMTorch.dll file
