@@ -26,8 +26,6 @@ for ff in files:
         # Skip CUDA and OpenCL tests
         if "Cuda" in ff or "OpenCL" in ff:
             continue
-        if sys.platform == "win32" and ff.startswith("TestSerializeTorchForce"):
-            continue  # This test fails on Windows
 
         print(f"Running {ff}...")
 
