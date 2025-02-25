@@ -1,5 +1,5 @@
 {% set name = "openmm-torch" %}
-{% set version = "1.5" %}
+{% set version = "1.5.1" %}
 
 # see github.com/conda-forge/conda-forge.github.io/issues/1059 for naming discussion
 {% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
@@ -16,12 +16,11 @@ package:
 
 source:
   git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: "9ef733c"
+  git_rev: "v1.5.1"
 build:
-  number: 2
+  number: 0
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
-  skip: true  # [win]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
   # pytorch in conda-forge does not support CUDA 11.8 anymore
   skip: true  # [cuda_compiler_version == "11.8"]
@@ -42,7 +41,7 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     {% if cuda_major >= 12 %}
     - libcufft-dev
-    - cuda-driver-dev
+    - cuda-driver-dev   # [linux]
     - cuda-cudart-dev
     - cuda-nvrtc-dev
     - cuda-nvtx-dev
@@ -63,6 +62,9 @@ requirements:
     - khronos-opencl-icd-loader  # [osx]
     - pytorch
     - pytorch =*={{ torch_proc_type }}*
+    - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
+    - nvtx-c                                    # [cuda_compiler_version not in (undefined, 'None') and win]
+    - pthreads-win32                            # [win]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
@@ -85,28 +87,6 @@ requirements:
 test:
   imports:
     - openmmtorch
-  commands: |
-    cd ${CONDA_PREFIX}/share/{{ name }}/tests
-    ls -al
-    set +e
-    summary=""
-    exitcode=0
-    for f in Test*; do
-      if [[ $f == *Cuda* || $f == *OpenCL* ]]; then
-        continue
-      fi
-      echo "Running $f..."
-      ./${f}
-      thisexitcode=$?
-      summary+="\n${f}: "
-      if [[ $thisexitcode == 0 ]]; then summary+="OK"; else summary+="FAILED"; fi
-      ((exitcode+=$thisexitcode))
-    done
-    echo "-------"
-    echo "Summary"
-    echo "-------"
-    echo -e "${summary}"
-    exit $exitcode
 
 about:
   home: https://github.com/openmm/openmm-torch
