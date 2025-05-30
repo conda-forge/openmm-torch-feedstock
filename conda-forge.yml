@@ -1,16 +1,16 @@
 azure:
   free_disk_space: true
-  store_build_artifacts: true
   settings_win:
     variables:
       CONDA_BLD_PATH: C:\bld
       MINIFORGE_HOME: C:\Miniforge
-      SET_PAGEFILE: "True"
+      SET_PAGEFILE: 'True'
+  store_build_artifacts: true
 build_platform:
   linux_aarch64: linux_64
   osx_arm64: osx_64
 conda_build:
-  pkg_format: "2"
+  pkg_format: '2'
 conda_forge_output_validation: true
 github:
   branch_name: main
