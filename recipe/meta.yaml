@@ -33,7 +33,7 @@ requirements:
     - swig                                   # [build_platform != target_platform]
     - pytorch                                # [build_platform != target_platform]
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
-    - openmm >=8.2.0                         # [build_platform != target_platform]
+    - openmm >=8.3.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
@@ -57,14 +57,13 @@ requirements:
     - setuptools
     - pip
     - swig
-    - openmm >=8.2.0
+    - openmm >=8.3.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - pytorch
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - nvtx-c                                    # [cuda_compiler_version not in (undefined, 'None') and win]
-    - libwinpthread                             # [win]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
