@@ -18,7 +18,7 @@ source:
   git_url: https://github.com/openmm/{{ name }}.git
   git_rev: "v1.5.1"
 build:
-  number: 0
+  number: 1
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
@@ -33,7 +33,7 @@ requirements:
     - swig                                   # [build_platform != target_platform]
     - pytorch                                # [build_platform != target_platform]
     - pytorch =*={{ torch_proc_type }}*      # [build_platform != target_platform]
-    - openmm >=8.2.0                         # [build_platform != target_platform]
+    - openmm >=8.3.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
@@ -57,14 +57,13 @@ requirements:
     - setuptools
     - pip
     - swig
-    - openmm >=8.2.0
+    - openmm >=8.3.0
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
     - pytorch
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - nvtx-c                                    # [cuda_compiler_version not in (undefined, 'None') and win]
-    - pthreads-win32                            # [win]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
