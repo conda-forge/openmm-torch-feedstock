@@ -1,5 +1,5 @@
 c_compiler:
-- vs2019
+- vs2022
 c_stdlib:
 - vs
 channel_sources:
@@ -9,9 +9,9 @@ channel_targets:
 cuda_compiler:
 - cuda-nvcc
 cuda_compiler_version:
-- '12.6'
+- None
 cxx_compiler:
-- vs2019
+- vs2022
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -19,9 +19,6 @@ pin_run_as_build:
 python:
 - 3.11.* *_cpython
 pytorch:
-- '2.7'
+- '2.8'
 target_platform:
 - win-64
-zip_keys:
-- - cuda_compiler
-  - cuda_compiler_version
