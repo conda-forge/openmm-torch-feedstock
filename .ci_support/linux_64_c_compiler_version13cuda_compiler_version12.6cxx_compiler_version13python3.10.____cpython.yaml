@@ -35,6 +35,5 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-  - cuda_compiler
+  - c_stdlib_version
   - cuda_compiler_version
-  - docker_image
