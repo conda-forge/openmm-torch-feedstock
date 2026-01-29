@@ -8,66 +8,86 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_cuda_compiler_version12.9python3.10.____cpython:
-        CONFIG: linux_64_cuda_compiler_version12.9python3.10.____cpython
+      linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.10.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_version12.9python_h6e6b5039
-      linux_64_cuda_compiler_version12.9python3.11.____cpython:
-        CONFIG: linux_64_cuda_compiler_version12.9python3.11.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_h4300bc21
+      linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.11.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_version12.9python_h9224ed27
-      linux_64_cuda_compiler_version12.9python3.12.____cpython:
-        CONFIG: linux_64_cuda_compiler_version12.9python3.12.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_h3747ab2d
+      linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.12.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_version12.9python_h33f95ef4
-      linux_64_cuda_compiler_version12.9python3.13.____cp313:
-        CONFIG: linux_64_cuda_compiler_version12.9python3.13.____cp313
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_h86c3c167
+      linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.13.____cp313:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_version12.9python3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_version12.9python_hd2594ab6
-      linux_64_cuda_compiler_versionNonepython3.10.____cpython:
-        CONFIG: linux_64_cuda_compiler_versionNonepython3.10.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_h88f978e6
+      linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.10.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_versionNonepython_hb6a3b480
-      linux_64_cuda_compiler_versionNonepython3.11.____cpython:
-        CONFIG: linux_64_cuda_compiler_versionNonepython3.11.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_hbcd90413
+      linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.11.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_versionNonepython_h3c1a96fc
-      linux_64_cuda_compiler_versionNonepython3.12.____cpython:
-        CONFIG: linux_64_cuda_compiler_versionNonepython3.12.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_h25b83c4e
+      linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.12.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.12.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_versionNonepython_h7883cd14
-      linux_64_cuda_compiler_versionNonepython3.13.____cp313:
-        CONFIG: linux_64_cuda_compiler_versionNonepython3.13.____cp313
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_hd2612ca0
+      linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.13.____cp313:
+        CONFIG: linux_64_c_stdlib_version2.17cuda_compiler_versionNonepython3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_cuda_compiler_versionNonepython_h46731b07
-      linux_aarch64_cuda_compiler_versionNonepython3.10.____cpython:
-        CONFIG: linux_aarch64_cuda_compiler_versionNonepython3.10.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.17cuda_compil_hbb4dfae4
+      linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.10.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNonep_h9166da89
-      linux_aarch64_cuda_compiler_versionNonepython3.11.____cpython:
-        CONFIG: linux_aarch64_cuda_compiler_versionNonepython3.11.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.28cuda_compil_h7bc1faf3
+      linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.11.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNonep_h61f3f778
-      linux_aarch64_cuda_compiler_versionNonepython3.12.____cpython:
-        CONFIG: linux_aarch64_cuda_compiler_versionNonepython3.12.____cpython
+        SHORT_CONFIG: linux_64_c_stdlib_version2.28cuda_compil_h9cd8e738
+      linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.12.____cpython:
+        CONFIG: linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNonep_h72ca1b73
-      linux_aarch64_cuda_compiler_versionNonepython3.13.____cp313:
-        CONFIG: linux_aarch64_cuda_compiler_versionNonepython3.13.____cp313
+        SHORT_CONFIG: linux_64_c_stdlib_version2.28cuda_compil_h8d03b736
+      linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.13.____cp313:
+        CONFIG: linux_64_c_stdlib_version2.28cuda_compiler_version13.0python3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNonep_h35b9d921
+        SHORT_CONFIG: linux_64_c_stdlib_version2.28cuda_compil_h7b65d883
+      linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.10.____cpython:
+        CONFIG: linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_c_stdlib_version2.17cuda_c_ha0a24fea
+      linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.11.____cpython:
+        CONFIG: linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_c_stdlib_version2.17cuda_c_h3eb98a43
+      linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.12.____cpython:
+        CONFIG: linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.12.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_c_stdlib_version2.17cuda_c_h50a48a7a
+      linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.13.____cp313:
+        CONFIG: linux_aarch64_c_stdlib_version2.17cuda_compiler_versionNonepython3.13.____cp313
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_c_stdlib_version2.17cuda_c_hb1d95a49
   timeoutInMinutes: 360
   variables: {}
 
