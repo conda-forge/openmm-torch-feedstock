@@ -18,7 +18,7 @@ source:
   git_url: https://github.com/openmm/{{ name }}.git
   git_rev: "v1.5.1"
 build:
-  number: 4
+  number: 5
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
@@ -38,7 +38,6 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [cuda_compiler_version not in (undefined, 'None')]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
     {% if cuda_major >= 12 %}
     - libcufft-dev
     - cuda-driver-dev   # [linux]
@@ -64,6 +63,7 @@ requirements:
     - pytorch =*={{ torch_proc_type }}*
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version not in (undefined, 'None')]
     - nvtx-c                                    # [cuda_compiler_version not in (undefined, 'None') and win]
+    - libgl-devel                    # [linux]
   run:
     - python
     - {{ pin_compatible('openmm', max_pin='x.x') }}
