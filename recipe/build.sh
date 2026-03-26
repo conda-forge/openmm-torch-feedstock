@@ -5,7 +5,7 @@ set -euxo pipefail
 rm -rf build || true
 
 # get torch libraries for osx-arm64
-LIBTORCH_DIR=${BUILD_PREFIX}
+LIBTORCH_DIR=${PREFIX}
 if [[ "$OSTYPE" == "darwin"* && $OSX_ARCH == "arm64" ]]; then
     LIBTORCH_DIR=${RECIPE_DIR}/libtorch
     conda list -p ${BUILD_PREFIX} > packages.txt
