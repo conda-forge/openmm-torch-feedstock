@@ -18,12 +18,13 @@ source:
   git_url: https://github.com/openmm/{{ name }}.git
   git_rev: "v1.5.1"
 build:
-  number: 6
+  number: 7
   string: cuda{{ cuda_compiler_version | replace('.', '') }}py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: cpu_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
   skip: true  # [aarch64 and cuda_compiler_version not in (undefined, 'None')]
   # pytorch in conda-forge does not support CUDA 11.8 anymore
   skip: true  # [cuda_compiler_version == "11.8"]
+  skip: true  # [cuda_compiler_version not in (undefined, 'None') and win]
 
 requirements:
   build:
